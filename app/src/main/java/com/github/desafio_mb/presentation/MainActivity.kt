@@ -1,4 +1,4 @@
-package com.github.desafio_mb
+package com.github.desafio_mb.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,10 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.github.desafio_mb.ui.theme.DesafiombTheme
+import com.github.desafio_mb.presentation.theme.DesafiombTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,29 +17,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DesafiombTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                Scaffold(modifier = Modifier.Companion.fillMaxSize()) { innerPadding ->
+                    Text(
+                        text = "Hello, Android!",
+                        modifier = Modifier.Companion
+                            .fillMaxSize()
+                            .padding(innerPadding)
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DesafiombTheme {
-        Greeting("Android")
     }
 }

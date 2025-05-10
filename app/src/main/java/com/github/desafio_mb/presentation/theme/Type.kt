@@ -1,4 +1,4 @@
-package com.github.desafio_mb.ui.theme
+package com.github.desafio_mb.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
