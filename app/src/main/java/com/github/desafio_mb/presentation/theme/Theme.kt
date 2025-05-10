@@ -1,6 +1,5 @@
-package com.github.desafio_mb.ui.theme
+package com.github.desafio_mb.presentation.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
