@@ -2,6 +2,7 @@ package com.github.desafio_mb.di
 
 import com.github.desafio_mb.BuildConfig
 import com.github.desafio_mb.data.repository.RepositoryImpl
+import com.github.desafio_mb.data.repository.RepositoryMockImpl
 import com.github.desafio_mb.domain.repository.Repository
 import com.github.desafio_mb.domain.usecase.get_exchange_list.GetExchangeListUseCase
 import com.github.desafio_mb.presentation.screens.exchange.ExchangeListViewModel
@@ -10,6 +11,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.logging.HttpLoggingInterceptor.Level
 import org.koin.core.module.dsl.viewModel
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -21,11 +23,12 @@ val networkModule = module {
 }
 
 val repositoryModule = module {
-    single<Repository> { RepositoryImpl(api = get()) }
+    single<Repository>(named("impl")) { RepositoryImpl(api = get()) }
+    single<Repository>(named("mock")) { RepositoryMockImpl() }
 }
 
 val useCaseModule = module {
-    factory<GetExchangeListUseCase> { GetExchangeListUseCase(repository = get()) }
+    factory<GetExchangeListUseCase> { GetExchangeListUseCase(repository = get(named("mock"))) }
 }
 
 val viewModelModule = module {

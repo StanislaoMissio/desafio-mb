@@ -24,7 +24,7 @@ class ExchangeListViewModel(private val getExchangeListUseCase: GetExchangeListU
             when (result) {
                 is Resource.Loading -> _state.value = ExchangeListState(isLoading = true)
                 is Resource.Success ->
-                    _state.value = ExchangeListState(exchanges = result.data ?: emptyList())
+                    _state.value = ExchangeListState(exchangeLists = result.data ?: emptyList())
 
                 is Resource.Error ->
                     _state.value = ExchangeListState(error = "An unexpected error occured")

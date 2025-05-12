@@ -1,9 +1,9 @@
 package com.github.desafio_mb.presentation.screens.exchange
 
-import com.github.desafio_mb.domain.model.Exchange
+import com.github.desafio_mb.domain.model.ExchangeList
 
 data class ExchangeListState(
     val isLoading: Boolean = false,
-    val exchanges: List<Exchange> = emptyList(),
+    val exchangeLists: List<ExchangeList> = emptyList(),
     val error: String = ""
 )

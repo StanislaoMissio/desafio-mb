@@ -11,6 +11,7 @@ composeBom = "2025.05.00"
 retrofit = "2.11.0"
 okhttpBom = "4.12.0"
 koin = "4.0.4"
+navigation = "2.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -32,7 +33,9 @@ okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref 
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
 koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-jetpack-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

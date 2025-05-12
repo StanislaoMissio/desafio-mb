@@ -1,11 +1,11 @@
 package com.github.desafio_mb.domain.repository
 
-import com.github.desafio_mb.domain.model.Exchange
+import com.github.desafio_mb.domain.model.ExchangeList
 
 interface Repository {
 
-    suspend fun getExchangeList(): List<Exchange>
+    suspend fun getExchangeList(): List<ExchangeList>
 
-    suspend fun getExchangeDetail(): Exchange
+    suspend fun getExchangeDetail(): ExchangeList
 
 }

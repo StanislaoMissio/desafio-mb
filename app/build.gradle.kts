@@ -29,7 +29,7 @@ android {
             )
         }
         debug {
-            buildConfigField("String", "API_KEY", "\"fdb50388-e61d-4117-a8f0-6c35d9f7021b\"")
+            buildConfigField("String", "API_KEY", "\"c5bb288c-1cdd-4652-9a19-52129e92e463\"")
             buildConfigField("String", "BASE_URL", "\"https://rest.coinapi.io\"")
             isDebuggable = true
             isMinifyEnabled = false
@@ -66,7 +66,9 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.koin)
+    implementation(libs.koin.jetpack.compose)
     implementation(libs.gson.converter)
+    implementation(libs.compose.navigation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

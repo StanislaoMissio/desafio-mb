@@ -1,17 +1,14 @@
 package com.github.desafio_mb.di
 
-import com.github.desafio_mb.commom.Resource
-import com.github.desafio_mb.domain.model.Exchange
-import kotlinx.coroutines.flow.Flow
+import com.github.desafio_mb.domain.model.ExchangeList
 import retrofit2.http.GET
-import retrofit2.http.Header
 
 interface API {
 
     @GET("v1/exchanges")
-    suspend fun getExchange(): List<Exchange>
+    suspend fun getExchange(): List<ExchangeList>
 
     @GET("v1/exchanges")
-    suspend fun getExchangeDetail(): Exchange
+    suspend fun getExchangeDetail(): ExchangeList
 
 }
