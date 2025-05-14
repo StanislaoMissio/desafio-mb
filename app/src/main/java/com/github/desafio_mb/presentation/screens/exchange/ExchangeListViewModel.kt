@@ -4,6 +4,8 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
 import com.github.desafio_mb.commom.Resource
 import com.github.desafio_mb.domain.usecase.get_exchange_list.GetExchangeListUseCase
 import kotlinx.coroutines.flow.launchIn

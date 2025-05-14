@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.koin.jetpack.compose)
     implementation(libs.gson.converter)
     implementation(libs.compose.navigation)
+    implementation(libs.androidx.paging.common.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

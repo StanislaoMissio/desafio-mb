@@ -1,5 +1,6 @@
 package com.github.desafio_mb.di
 
+import com.github.desafio_mb.domain.model.Exchange
 import com.github.desafio_mb.domain.model.ExchangeList
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -90,7 +91,7 @@ object Mock {
         return Gson().fromJson(json, type)
     }
 
-    fun mockExchangeById(): ExchangeList {
+    fun mockExchangeById(): Exchange {
         val json = "{\n" +
                 "  \"exchange_id\": \"EXCHG123\",\n" +
                 "  \"website\": \"https://www.randomexchange.io/\",\n" +
